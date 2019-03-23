@@ -1,0 +1,17 @@
+.nav {
+  text-align: right;
+  height: 76px;
+  line-height: 76px;
+  color: #fff;
+  font-size: 16px;
+  padding-right: 100px;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 60px;
+    cursor: pointer;
+  }
+  .active {
+    color: #51F1EF;
+  }
+}
