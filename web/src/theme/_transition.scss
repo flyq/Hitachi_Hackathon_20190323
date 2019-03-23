@@ -1,0 +1,22 @@
+// select
+.select-enter {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+}
+
+.select-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s ease-out;
+}
+
+.select-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.select-leave-active {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+  transition: all .3s ease-out;
+}

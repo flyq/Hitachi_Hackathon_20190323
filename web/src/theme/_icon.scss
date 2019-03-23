@@ -1,41 +1,69 @@
 @mixin icon ($width, $height, $list, $decorators) {
-	@each $item in $list {
-		&-#{$item} {
-			width: $width;
-			height: $height;
-			background: url(~@/assets/icons/icon_#{$item}.png) center no-repeat;
+  @each $item in $list {
+    &-#{$item} {
+      width: $width;
+      height: $height;
+      background: url(~@/assets/icons/icon-#{$item}.png) center no-repeat;
       background-size: 100%;
-
-			@if $decorators != null {
-				@each $decorator in $decorators {
-					&.#{$decorator} {
-						background: url(~@/assets/icons/icon_#{$item}_#{$decorator}.png) center no-repeat;
+      @if $decorators !=null {
+        @each $decorator in $decorators {
+          &.#{$decorator} {
+            background: url(~@/assets/icons/icon-#{$item}-#{$decorator}.png) center no-repeat;
             background-size: 100%;
-					}
-				}
-			}
-		}
-	}
+          }
+        }
+      }
+    }
+  }
 }
 
 .icon {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-
-
-	// 乘号   ---> 一个icon四个色的 如果五个色继续在第三个参数加
-	@include icon(12px, 12px, (times), (grey, blue, light));
-
-	//用户头像   --->  一个icon 一个色的
-	@include icon(28px, 28px, (account), null);
-
-	// 排行榜   ---> 多个icon 一个色
-	@include icon(24px, 30px, (top1, top2, top3), null);
-
-	// 卡包   ---> 二个icon 二个色
-	@include icon(60px, 40px, (cardcoupon, profit), (blue));
-
-	// 语言icon
-	@include icon(32px, 32px, (zh, en), (blue));
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  @include icon(16px, 15px, (addpay), null);
+  @include icon(20px, 20px, (pay), null);
+  @include icon(24px, 17px, (payhistory), null);
+  @include icon(14px, 16px, (billhistory), null);
+  @include icon(18px, 20px, (addstore), null);
+  @include icon(18px, 13px, (currentbills), null);
+  @include icon(18px, 15px, (discountnav), null);
+  @include icon(17px, 17px, (addountnav), null);
+  @include icon(18px, 20px, (user), null);
+  @include icon(18px, 20px, (password), null);
+  @include icon(14px, 8px, (openselect), null);
+  @include icon(28px, 28px, (code), null);
+  @include icon(19px, 19px, (phone), null);
+  @include icon(20px, 16px, (email), null);
+  @include icon(53px, 63px, (resetpassword), null);
+  @include icon(16px, 17px, (home), null);
+  @include icon(28px, 20px, (storehave), null);
+  @include icon(13px, 17px, (fbainfo), null);
+  @include icon(20px, 20px, (auth), null);
+  @include icon(20px, 20px, (store), null);
+  @include icon(18px, 18px, (account), null);
+  @include icon(17px, 18px, (fba), null);
+  @include icon(18px, 18px, (shop), null);
+  @include icon(88px, 45px, (estimate_value_line), null);
+  @include icon(65px, 24px, (num_line), null);
+  @include icon(69px, 24px, (estimate_num_line), null);
+  @include icon(75px, 37px, (value_line), null);
+  @include icon(19px, 19px, (search), null);
+  @include icon(16px, 16px, (add), null);
+  @include icon(16px, 16px, (reduce), null);
+  @include icon(14px, 14px, (close), null);
+  @include icon(10px, 10px, (success), null);
+  @include icon(36px, 28px, (alipay), (blue));
+  @include icon(31px, 30px, (paypal), (blue));
+  @include icon(32px, 26px, (crad), (blue));
+  @include icon(12px, 12px, (time), null);
+  @include icon(50px, 50px, (userhead), null);
+  @include icon(16px, 16px, (set), null);
+  @include icon(15px, 16px, (out), null);
+  @include icon(20px, 14px, (stepsuccess), null);
+  @include icon(20px, 20px, (loading), null);
+  @include icon(16px, 16px, (meshide), null);
+  @include icon(16px, 16px, (mesopen), null);
+  @include icon(30px, 30px, (load), null);
+  @include icon(22px, 22px, (addimg), null);
 }

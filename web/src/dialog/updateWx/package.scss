@@ -1,0 +1,66 @@
+.appeal {
+  width: 460px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.title {
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #282E37;
+  margin-bottom: 30px;
+  i {
+    float: right;
+    cursor: pointer;
+  }
+}
+
+.personalitem {
+  width: 400px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.labal {
+  width: 66px;
+  color: #929CB0;
+  font-size: 14px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+}
+
+.input {
+  width: 240px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+}
+
+.codeTime {
+  width: 94px;
+  padding-left: 20px;
+  color: #F35111;
+  font-size: 14px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.btnWrap {
+  width: 240px;
+  margin-left: 66px;
+  .btn {
+    width: 110px;
+    display: inline-block;
+  }
+  .btn:nth-child(2) {
+    margin-left: 20px;
+  }
+}

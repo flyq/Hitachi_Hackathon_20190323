@@ -1,0 +1,22 @@
+.#{$component-prefix} {
+  &-button {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px
+  }
+  &-button-default {
+    color: #fff;
+    background-color: #F35111;
+  }
+  &-button-cancel {
+    color: #282E37;
+    background-color: #E5E5E5;
+  }
+  &-button-hollow {
+    color: #F35111;
+    border:1px solid #F35111;
+  }
+}

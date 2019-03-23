@@ -3,6 +3,11 @@ import ajax from 'ajax'
 import Global from 'Global'
 
 class IOComponent extends Component {
+  constructor() {
+    super()
+    this.ajax = ajax
+  }
+
   emit (...rest) {
     Global.emit(...rest)
   }
@@ -15,10 +20,21 @@ class IOComponent extends Component {
     Global.off(...rest)
   }
 
-  ajax (...rest) {
-    ajax(...rest)
+  openDialog (...rest) {
+    this.emit('dialog', ...rest)
   }
-  // 这里还可以放一些全局的东西  所有页面组件都继承这个组件开发。
+
+  url (api, data) {
+    let url = ''
+    for (let key in data) {
+      if (url.indexOf('?') > -1) {
+        url += `${'&' + key}=${data[key]}`
+      } else {
+        url += `?${key}=${data[key]}`
+      }
+    }
+    return api + url
+  }
 }
 
 export default IOComponent

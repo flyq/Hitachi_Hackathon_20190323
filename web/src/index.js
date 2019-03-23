@@ -6,7 +6,6 @@ import 'prototypeExtend'
 import Root from './Root'
 import registerServiceWorker from './registerServiceWorker'
 import { AppContainer } from 'react-hot-loader'
-
 const configureStore = require('./store/configureStore')
 const store = configureStore.default.configureStore()
 const history = configureStore.default.history

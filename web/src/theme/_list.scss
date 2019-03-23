@@ -1,0 +1,23 @@
+.#{$component-prefix} {
+  &-list-li {
+    width: 100%;
+    background-color: #fff;
+    color: #252B33;
+  }
+  &-list-lis {
+    height: 100px;
+  }
+  &-list-li:nth-child(2n) {
+    background-color: #F5F5F5;
+  }
+  &-list-empty {
+    display: block;
+    text-align: center;
+    color: #252B33;
+    padding: 10px;
+  }
+  &-list-default {
+    height: 40px;
+    line-height: 40px;
+  }
+}

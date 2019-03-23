@@ -1,5 +1,13 @@
 @import "./var.global.scss";
-
-.xxx {
-  color: $white;
+.c-dialog {
+  z-index: 1021;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(#000, .6);
+  align-items: center;
+  justify-content: center;
 }

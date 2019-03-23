@@ -1,14 +1,23 @@
-import { Switch, Route, withRouter } from 'react-router'
+import { Switch, Route, withRouter} from 'react-router'
 import React, { Component }  from 'react'
 import { connect } from 'react-redux'
 import App from './App'
 import Home from '@/pages/home'
-import Header from '@/pages/header'
+import Header from '@/pages/home/modules/header'
+import List from '@/pages/list'
+import Create from '@/pages/create'
+import Register from '@/pages/register'
+import Partake from '@/pages/partake'
+import Release from '@/pages/release'
 
 
 class Router extends Component {
   state = {
     pathname: this.props.router
+  }
+
+  componentWillMount () {
+    console.log(this.state.pathname)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -18,11 +27,19 @@ class Router extends Component {
   }
 
   render() {
+    const { pathname } = this.state
     return (<App>
       <div>
-        <Header pathname={this.state.pathname} />
+        <div>
+          <Header pathname={pathname} />
+        </div>}
       </div>
       <Switch>
+        <Route exact path="/release" component={Release} />
+        <Route exact path="/partake" component={Partake} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/create" component={Create} />
+        <Route exact path="/list" component={List} />
         <Route exact path="/" component={Home} />
       </Switch>
     </App>)

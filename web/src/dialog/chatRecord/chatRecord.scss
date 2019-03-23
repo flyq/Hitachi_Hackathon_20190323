@@ -1,0 +1,132 @@
+.record {
+  width: 500px;
+  height: 420px;
+  padding: 30px 30px 0 30px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.title {
+  color: #252B33;
+  font-size: 16px;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #DCDCDC;
+  i {
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+  }
+}
+
+.contant::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+.contant::-webkit-scrollbar-track {
+  width: 6px;
+  background-color: transparent;
+}
+
+.contant::-webkit-scrollbar-thumb {
+  width: 6px;
+  border-radius: 2px;
+  background-color: #DCDCDC;
+}
+
+.contant {
+  height: 300px;
+  width: 100%;
+  border: 1px solid rgba(220, 220, 220, 1);
+  border-radius: 4px;
+  padding: 20px 20px 20px 58px;
+  box-shadow: inset 0px 0px 5px 1px #ded9d9;
+  overflow-x: scroll;
+  position: relative;
+  li {
+    padding: 10px 0;
+    position: relative;
+  }
+  li::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 1px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #EAEAEA;
+    position: absolute;
+  }
+  .isOpen {
+    position: absolute;
+    left: -28px;
+    height: 100px;
+  }
+  i {
+    top: -1px;
+  }
+  .service {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #F35111;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+  .my {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #282E37;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
+.name {
+  color: #333;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.message {
+  color: #333;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.time {
+  margin-left: 10px;
+  color: #CCCCCC;
+  font-size: 10px;
+}
+
+.hr {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 1px;
+  background-color: #EAEAEA;
+  left: 10px;
+  z-index: 1;
+}
