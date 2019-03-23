@@ -6,7 +6,8 @@ import styles from './register.scss'
 
 class Register extends Component {
   state = {
-    skilful: ''
+    skilful: 'solidity',
+    num: 1
   }
   
   change (e) {
@@ -15,11 +16,13 @@ class Register extends Component {
 
   btn () {
     // console.log(buyItem)
-    buyItem(2, 1000000000000000000).then(resp => {
-      console.log(resp, 'success');
-    }).catch(e => {
-      console.log(e, 'error');
-    })
+    if (this.state.skilful && this.state.num) {
+      buyItem(2, 1000000000000000000).then(resp => {
+        console.log(resp, 'success');
+      }).catch(e => {
+        console.log(e, 'error');
+      })
+    }
   }
 
   render() {
@@ -30,7 +33,11 @@ class Register extends Component {
             <img src="/7.png" alt="" />
             <p>擅长编程语言</p>
             <div className={styles.input}>
-              <input onChange={this.change.bind(this)} type="text" value={this.state.skilful} />
+              <input onChange={this.change.bind(this, 'skilful')} type="text" value={this.state.skilful} />
+            </div>
+            <p>抵押ETH个数<span>(抵押越多,分配仲裁概率越高)</span></p>
+            <div className={styles.input}>
+              <input onChange={this.change.bind(this, 'num')} type="text" value={this.state.num} />
             </div>
             <div onClick={this.btn.bind(this)} className={styles.btn}>确认注册</div>
           </div>
