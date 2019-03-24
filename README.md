@@ -1,6 +1,12 @@
 # Hitachi_Hackathon_20190323
 Hitachi Hackathon in Shanghai Zhangjiang Xnode
 
+
+众包平台合约地址：
+https://ropsten.etherscan.io/address/0xeddd8b729de4c9a85cc9ac2335e82feccef110e1
+
+
+
 众包平台接口文档
 
 核心struct
