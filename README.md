@@ -250,49 +250,58 @@ function increasePayout(uint _bountyId, uint _newFulfillmentAmount, uint _value)
 ```
 view(只读接口):
 16. 得到某个任务的某个完成的数据
+```
 function getFulfillment(uint _bountyId, uint _fulfillmentId)
       public
       constant
       validateBountyArrayIndex(_bountyId)
       validateFulfillmentArrayIndex(_bountyId, _fulfillmentId)
       returns (bool, address, string)
+```
 17. 得到某个任务的数据
+```
   function getBounty(uint _bountyId)
       public
       constant
       validateBountyArrayIndex(_bountyId)
       returns (address, uint, uint, bool, uint, uint)
+```
 18. 得到仲裁者地址
+```
 function getBountyArbiter(uint _bountyId)
       public
       constant
       validateBountyArrayIndex(_bountyId)
       returns (address)
+```
 19. 得到某个任务的_data
+```
 function getBountyData(uint _bountyId)
       public
       constant
       validateBountyArrayIndex(_bountyId)
       returns (string)
-20. 得到某个任务的奖赏token的该token合约地址
+```
+20.  得到某个任务的奖赏token的该token合约地址
+```
 function getBountyToken(uint _bountyId)
       public
       constant
       validateBountyArrayIndex(_bountyId)
       returns (address)
+```
 21. 得到当前全局有多少任务
+```
 function getNumBounties()
       public
       constant
       returns (uint)
-      
-22. 得到当前某任务有多少方案提交
+``` 
+22.  得到当前某任务有多少方案提交
+```
 function getNumFulfillments(uint _bountyId)
       public
       constant
       validateBountyArrayIndex(_bountyId)
       returns (uint)
-
-
-
-
+```
